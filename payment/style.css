@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('pic.jpg');
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -53,7 +52,7 @@ body {
 .charge {
     width: 100%;
     text-align: center;
-    color: #c70202c4;
+    color: #dcdcdc;
 }
 .form-container .field-container:first-of-type {
     grid-area: name;
@@ -85,10 +84,10 @@ body {
     grid-column-gap: 10px;
     grid-template-columns: auto auto;
     grid-template-rows: 90px 90px 90px;
-    grid-template-areas: "name name""number number""expiration security";
+    grid-template-areas: "name name" "number number" "expiration security";
     max-width: 400px;
     padding: 20px;
-    color: #a50419;
+    color: #dcdcdc ;
     font-weight: bold;
 }
 
