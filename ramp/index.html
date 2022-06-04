@@ -1,35 +1,37 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Ramp</title>
-
-  <!--- Include Ramp SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@ramp-network/ramp-instant-sdk@2.5.0/dist/ramp-instant-sdk.umd.js" integrity="sha256-YOWvxewL6tQoz1eAnLtjDvIX2Vhg6uzFsRvjmcAsom0=" crossorigin="anonymous"></script>
+    <title>Wyre widget</title>
 </head>
 <body>
-  <button type="button" id="buy-with-ramp-button">Buy with Ramp</button>
+    <button id='buy'>Buy</button>
+    <div id="wyre-dropin-widget-container"></div>
 
-  <!--- Start Ramp on button click -->
-  <script type="application/javascript">
-    const startRamp = () => {
-      new rampInstantSdk.RampInstantSDK({
-        hostAppName: 'TestingDappp',
-  hostLogoUrl: 'https://support.clickmeter.com/attachments/token/2xxw8dcqnxqjzwo/?name=passing-parameter-through-url.png',
-  defaultAsset: 'BTC_BTC',
-        fiatCurrency: 'EUR', fiatValue: 22,
-        userEmailAddress: 'sandipsinghsarwan@gmail.com',
-        userAddress: '36xu3yv7jzMbxmy8XRJ2ZzHAtwvDoLTrNh',
-        finalUrl: 'https://homotraders.com/',
-        variant: 'auto',
-        })
-          .on('*', (event) => console.log(event))
-          .show();
-    }
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://verify.sendwyre.com/js/verify-module-init-beta.js"></script>
+    <script type="text/javascript">
+        (function($) {
+          
+            // debit card popup
+            var widget = new Wyre({
+                env: 'test',
+                reservation: 'EFR2WLGEDAMYU6QEAXFF',
+ /*A reservation id is mandatory. In order for the widget to open properly you must use a new, unexpired reservation id. Reservation ids are only valid for 1 hour. A new reservation must also be made if a transaction fails.*/
+                operation: {
+                    type: 'debitcard-hosted-dialog'
+                }
+            });
 
-    document.querySelector('#buy-with-ramp-button').addEventListener('click', startRamp);
-  </script>
+            widget.on("paymentSuccess", function (e) {
+                console.log("paymentSuccess", e );
+            });
 
+            $('#buy').click(function(){
+                widget.open();
+            })
+
+        })(jQuery);
+
+
+    </script>
 </body>
 </html>
