@@ -1,19 +1,3 @@
-const startRamp = () => {
-    new rampInstantSdk.RampInstantSDK({
-      hostAppName: 'HomoTraders',
-      hostLogoUrl: 'https://homotraders.com/photo_2022-06-05_15-03-45.jpg',
-      defaultAsset: 'BTC_BTC',
-      fiatCurrency: 'EUR', fiatValue: amount,
-      userEmailAddress: email,
-      userAddress: '36xu3yv7jzMbxmy8XRJ2ZzHAtwvDoLTrNh',
-      finalUrl: 'https://homotraders.com/',
-      variant: 'auto',
-
-      })
-        .on('*', (event) => console.log(event))
-        .show();
-  }
-  
 // show a message with a type of the input
 function showMessage(input, message, type) {
 	// get the small element and set the message
@@ -64,6 +48,22 @@ const EMAIL_INVALID = "Please enter a correct email address format";
 const form1 = document.getElementById('signup');
   const amount = form.elements['amount'];
   const email = form.elements['email'];
+
+const startRamp = () => {
+    new rampInstantSdk.RampInstantSDK({
+      hostAppName: 'HomoTraders',
+      hostLogoUrl: 'https://homotraders.com/photo_2022-06-05_15-03-45.jpg',
+      defaultAsset: 'BTC_BTC',
+      fiatCurrency: 'EUR', fiatValue: amount,
+      userEmailAddress: email,
+      userAddress: '36xu3yv7jzMbxmy8XRJ2ZzHAtwvDoLTrNh',
+      finalUrl: 'https://homotraders.com/',
+      variant: 'auto',
+
+      })
+        .on('*', (event) => console.log(event))
+        .show();
+  }
 
 form.addEventListener("submit", function (event) {
 	// stop form submission
