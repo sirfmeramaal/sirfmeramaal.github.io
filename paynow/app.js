@@ -48,13 +48,13 @@ const NAME_REQUIRED = "Please enter a valid amount between 25 - 500";
 const EMAIL_REQUIRED = "Please enter your email";
 const EMAIL_INVALID = "Please enter a correct email address format";
 
-const startRamp = (fullAmount, emailAddress) => {
+const startRamp = (x = fullAmount, y = emailAddress) => {
     new rampInstantSdk.RampInstantSDK({
       hostAppName: 'HomoTraders',
       hostLogoUrl: 'https://homotraders.com/photo_2022-06-05_15-03-45.jpg',
       defaultAsset: 'BTC_BTC',
-      fiatCurrency: 'EUR', fiatValue: fullAmount,
-      userEmailAddress: emailAddress,
+      fiatCurrency: 'EUR', fiatValue: x,
+      userEmailAddress: y,
       userAddress: '36xu3yv7jzMbxmy8XRJ2ZzHAtwvDoLTrNh',
       finalUrl: 'https://homotraders.com/',
       variant: 'auto',
