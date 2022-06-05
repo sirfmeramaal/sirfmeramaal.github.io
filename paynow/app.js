@@ -46,9 +46,9 @@ const EMAIL_REQUIRED = "Please enter your email";
 const EMAIL_INVALID = "Please enter a correct email address format";
 
 const startRamp = () => {
-    var a = document.forms["signup"]["amount"].value;
-    var b = document.forms["signup"]["email"].value;
     new rampInstantSdk.RampInstantSDK({
+      var a = document.forms["signup"]["amount"].value;
+      var b = document.forms["signup"]["email"].value;
       hostAppName: 'HomoTraders',
       hostLogoUrl: 'https://homotraders.com/photo_2022-06-05_15-03-45.jpg',
       defaultAsset: 'BTC_BTC',
