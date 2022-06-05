@@ -1,0 +1,46 @@
+<!--<a
+  href="https://buy.ramp.network/?fiatCurrency=EUR&fiatValue=200&userEmailAddress=testingramp@yahoo.com&userAddress=36xu3yv7jzMbxmy8XRJ2ZzHAtwvDoLTrNh"
+  target="_blank"
+>
+  Go to Ramp Instant
+</a>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ramp</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!--- Include Ramp SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@ramp-network/ramp-instant-sdk@2.5.0/dist/ramp-instant-sdk.umd.js" integrity="sha256-YOWvxewL6tQoz1eAnLtjDvIX2Vhg6uzFsRvjmcAsom0=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="signup.html" method="post" id="signup">
+            <h1>Buy Bitcoin with EUR</h1>
+            <div class="field">
+                <label for="amount">Amount:</label>
+                <input type="text" id="amount" name="name" placeholder="Enter amount 25 - 500" />
+                <small></small>
+            </div>
+            <div class="field">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email address" />
+                <small></small>
+            </div>
+            <div class="field">
+                <button type="submit" class="full" id="buy-with-ramp-button">Buy</button>
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+  <!--<button type="button" id="buy-with-ramp-button">Buy with Ramp</button> -->
+
+  <!--- Start Ramp on button click -->
+  <!--<script src="ramp.js"></script> -->
+  
+</body>
+</html>
