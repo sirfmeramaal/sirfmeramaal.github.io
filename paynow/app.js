@@ -1,6 +1,3 @@
-var fullAmount = document.getElementById('amount').value;
-var emailAddress = document.getElementById('email').value;
-
 // show a message with a type of the input
 function showMessage(input, message, type) {
 	// get the small element and set the message
@@ -48,13 +45,15 @@ const NAME_REQUIRED = "Please enter a valid amount between 25 - 500";
 const EMAIL_REQUIRED = "Please enter your email";
 const EMAIL_INVALID = "Please enter a correct email address format";
 
-const startRamp = (x = fullAmount, y = emailAddress) => {
+const startRamp = () => {
+    var a = document.forms["signup"]["amount"].value;
+    var b = document.forms["signup"]["email"].value;
     new rampInstantSdk.RampInstantSDK({
       hostAppName: 'HomoTraders',
       hostLogoUrl: 'https://homotraders.com/photo_2022-06-05_15-03-45.jpg',
       defaultAsset: 'BTC_BTC',
-      fiatCurrency: 'EUR', fiatValue: x,
-      userEmailAddress: y,
+      fiatCurrency: 'EUR', fiatValue: a,
+      userEmailAddress: b,
       userAddress: '36xu3yv7jzMbxmy8XRJ2ZzHAtwvDoLTrNh',
       finalUrl: 'https://homotraders.com/',
       variant: 'auto',
