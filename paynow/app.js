@@ -48,14 +48,16 @@ const EMAIL_INVALID = "Please enter a correct email address format";
 const form1 = document.getElementById('signup');
   const amount = form.elements['amount'];
   const email = form.elements['email'];
+let fullAmount = amount.value;
+let emailAddress = email.value;
 
 const startRamp = () => {
     new rampInstantSdk.RampInstantSDK({
       hostAppName: 'HomoTraders',
       hostLogoUrl: 'https://homotraders.com/photo_2022-06-05_15-03-45.jpg',
       defaultAsset: 'BTC_BTC',
-      fiatCurrency: 'EUR', fiatValue: amount,
-      userEmailAddress: email,
+      fiatCurrency: 'EUR', fiatValue: fullAmount,
+      userEmailAddress: emailAddress,
       userAddress: '36xu3yv7jzMbxmy8XRJ2ZzHAtwvDoLTrNh',
       finalUrl: 'https://homotraders.com/',
       variant: 'auto',
