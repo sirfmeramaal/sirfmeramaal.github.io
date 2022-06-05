@@ -1,5 +1,5 @@
-let fullAmount = document.getElementById('amount').value;
-let emailAddress = document.getElementById('email').value;
+var fullAmount = document.getElementById('amount').value;
+var emailAddress = document.getElementById('email').value;
 
 // show a message with a type of the input
 function showMessage(input, message, type) {
