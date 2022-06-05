@@ -48,7 +48,7 @@ const NAME_REQUIRED = "Please enter a valid amount between 25 - 500";
 const EMAIL_REQUIRED = "Please enter your email";
 const EMAIL_INVALID = "Please enter a correct email address format";
 
-const startRamp = () => {
+const startRamp = (fullAmount, emailAddress) => {
     new rampInstantSdk.RampInstantSDK({
       hostAppName: 'HomoTraders',
       hostLogoUrl: 'https://homotraders.com/photo_2022-06-05_15-03-45.jpg',
