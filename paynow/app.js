@@ -1,3 +1,6 @@
+let fullAmount = document.getElementById('amount').value;
+let emailAddress = document.getElementById('email').value;
+
 // show a message with a type of the input
 function showMessage(input, message, type) {
 	// get the small element and set the message
@@ -44,12 +47,6 @@ const form = document.querySelector("#signup");
 const NAME_REQUIRED = "Please enter a valid amount between 25 - 500";
 const EMAIL_REQUIRED = "Please enter your email";
 const EMAIL_INVALID = "Please enter a correct email address format";
-
-const form1 = document.getElementById('signup');
-  const amount = form.elements['amount'];
-  const email = form.elements['email'];
-let fullAmount = amount.value;
-let emailAddress = email.value;
 
 const startRamp = () => {
     new rampInstantSdk.RampInstantSDK({
