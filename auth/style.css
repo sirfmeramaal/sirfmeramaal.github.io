@@ -15,29 +15,33 @@ body {
 }
 
 h4 {
-  color: white;
+  color: yellow;
 }
 
 h5 {
-  color: white;
+  color: yellow;
+}
+
+#timer {
+  color: red;
 }
 
 .digit-group input {
   width: 30px;
   height: 50px;
-  background-color: #18182a;
-  border: none;
+  background-color: rgb(28, 29, 29);
+  border: solid;
   line-height: 50px;
   text-align: center;
   font-size: 24px;
   font-family: "Raleway", sans-serif;
   font-weight: 200;
-  color: white;
+  color: yellow;
   margin: 0 2px;
 }
 .digit-group .splitter {
   padding: 0 5px;
-  color: white;
+  color: yellow;
   font-size: 24px;
 }
 
